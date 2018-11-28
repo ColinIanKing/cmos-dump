@@ -1,0 +1,21 @@
+name: cmos-dump
+version: V0.00.01
+summary: CMOS dumping tool
+description: This tool dumps the CMOS data in a human readable form
+confinement: strict
+grade: stable
+type: app
+
+parts:
+    cmos-dump:
+        plugin: make
+        source: .
+        build-packages:
+            - gcc
+            - make
+
+apps:
+    cmos-dump:
+        command: usr/sbin/cmos-dump
+        plugs:
+            - io-ports-control
