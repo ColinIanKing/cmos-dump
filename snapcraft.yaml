@@ -8,6 +8,10 @@ confinement: strict
 grade: stable
 type: app
 
+architectures:
+    - amd64
+    - i386
+
 parts:
     cmos-dump:
         plugin: make
