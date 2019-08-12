@@ -1,5 +1,7 @@
 name: cmos-dump
-version: V0.00.01
+version: git
+version-script: |
+    echo $(git describe --tags)
 summary: CMOS dumping tool
 description: This tool dumps the CMOS data in a human readable form
 confinement: strict
